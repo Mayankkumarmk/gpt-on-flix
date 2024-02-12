@@ -23,11 +23,11 @@ const Browse = () => {
                 <GptSearch />
             )
                 : (
-                    <div>
+                    <>
 
                         <MainContainer />
                         <SecondaryContainer />
-                    </div>
+                    </>
                 )
 
             }

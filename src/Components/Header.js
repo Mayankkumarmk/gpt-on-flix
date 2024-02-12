@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { addUser, removeUser } from "../utils/userSlice";
-import { LOGO, SUPPORTED_LANGUAGES } from "../utils/constant"
+import { LOGO, SUPPORTED_LANGUAGES } from "../utils/constants"
 import { toggleGptSearchView } from "../utils/gptSlice";
 import { changeLanguage } from "../utils/configSlice";
 
