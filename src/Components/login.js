@@ -38,7 +38,7 @@ const Login = () => {
                         .then(() => {
                             const { uid, email, displayName, photoURL } = auth.currentUser;
                             dispatch(addUser({ uid: uid, email: email, photoURL: photoURL, displayName: displayName }));
-                         }).catch((error) => {
+                        }).catch((error) => {
                             // An error occurred
                             // ...
                             setErrorMessage(error.message)
@@ -70,12 +70,14 @@ const Login = () => {
         <div>
 
             <Header />
-            <img
-                src={BG_URL}
-                alt="background"
-                className="absolute"
-            />
-            <form onSubmit={(e) => e.preventDefault()} className="rounded-md bg-black mx-auto left-0 right-0 my-36 w-3/12 absolute p-12 bg-opacity-80 text-white ">
+            <div className="absolute  ">
+                <img
+                    src={BG_URL}
+                    alt="background"
+                    className="   h-screen object-cover md:w-full md:h-screen  lg:h-auto lg:w-full"
+                />
+            </div>
+            <form onSubmit={(e) => e.preventDefault()} className="rounded-md  bg-black mx-auto left-0 right-0 my-36  w-full md:w-3/12 absolute p-12 bg-opacity-80 text-white ">
                 <h1 className="text-white font-bold text-2xl ">{isSignInForm ? "Sign in" : "Sign Up"}</h1>
                 {!isSignInForm && (<input ref={name} placeholder="Full Name" className=" p-1 mt-4 w-full  rounded-sm bg-gray-700"></input>)}
                 <input type="text" ref={email} placeholder="Email Address" className=" p-1 mt-4  w-full  rounded-sm bg-gray-700"></input>
