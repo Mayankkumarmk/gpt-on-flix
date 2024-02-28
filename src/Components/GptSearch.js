@@ -1,6 +1,6 @@
 import { BG_URL } from "../utils/constants";
-import GptMovieSuggestion from "./GptMoviesSuggestion";
-import GptSearhBar from "./GptSearchBar";
+import GptMoviesSuggestion from "./GptMoviesSuggestion";
+import GptSearchBar from "./GptSearchBar";
 
 const GptSearch = () => {
     return (
@@ -8,10 +8,10 @@ const GptSearch = () => {
             <img
                 src={BG_URL}
                 alt="background"
-                className="absolute -z-10"
+                className="fixed -z-10 "
             />
-            <GptSearhBar />
-            <GptMovieSuggestion />
+            <GptSearchBar />
+            <GptMoviesSuggestion />
         </div>
     )
 }
